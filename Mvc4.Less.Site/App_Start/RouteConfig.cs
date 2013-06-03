@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Mvc4
+namespace Mvc4.Less
 {
     public class RouteConfig
     {

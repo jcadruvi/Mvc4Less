@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Optimization;
 
-namespace Mvc4.App_Start
+namespace Mvc4.Less.App_Start
 {
     public class BundleConfig
     {
@@ -26,7 +26,8 @@ namespace Mvc4.App_Start
             bundles.Add(new StyleBundle("~/Content/layout.bundle.css")
                 .Include("~/Content/kendo.common.css",
 						 "~/Content/kendo.mobitor.css",
-                         "~/Content/Site.css"));
+                         "~/Content/Site.css",
+                         "~/Content/Index.css"));
 
             bundles.Add(new ScriptBundle("~/Scripts/layout.bundle.javascript")
                 .Include("~/Scripts/jquery-1.9.1.js",

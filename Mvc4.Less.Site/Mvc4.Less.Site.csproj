@@ -138,6 +138,7 @@
     <Content Include="Content\BlueOpal\slider-h.gif" />
     <Content Include="Content\BlueOpal\slider-v.gif" />
     <Content Include="Content\BlueOpal\sprite.png" />
+    <None Include="Content\Index.less" />
     <Content Include="Content\kendo.common.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
