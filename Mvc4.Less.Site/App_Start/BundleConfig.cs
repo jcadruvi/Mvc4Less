@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Optimization;
+using BundleTransformer.Core.Orderers;
+using BundleTransformer.Core.Transformers;
 
 namespace Mvc4.Less.App_Start
 {
@@ -22,12 +24,19 @@ namespace Mvc4.Less.App_Start
                 bundles.IgnoreList.Ignore("*-vsdoc.js");
                 bundles.IgnoreList.Ignore("*.debug.js", OptimizationMode.WhenEnabled);
             }
-
             bundles.Add(new StyleBundle("~/Content/layout.bundle.css")
-                .Include("~/Content/kendo.common.css",
-						 "~/Content/kendo.mobitor.css",
-                         "~/Content/Site.css",
-                         "~/Content/Index.css"));
+                            .Include("~/Content/kendo.common.css",
+                                     "~/Content/kendo.mobitor.css",
+                                     "~/Content/Site.css"));
+
+            var css = new Bundle("~/Content/layout.bundle.less")
+                        .Include("~/Content/Index.less");
+            css.Transforms.Add(new LessTransform());
+            css.Transforms.Add(new CssMinify());
+            bundles.Add(css);
+
+            //bundles.Add(new StyleBundle("~/Content/layout.bundle.css")
+            //                .Include("~/Content/Index.css"));
 
             bundles.Add(new ScriptBundle("~/Scripts/layout.bundle.javascript")
                 .Include("~/Scripts/jquery-1.9.1.js",
