@@ -35,9 +35,6 @@ namespace Mvc4.Less.App_Start
             css.Transforms.Add(new CssMinify());
             bundles.Add(css);
 
-            //bundles.Add(new StyleBundle("~/Content/layout.bundle.css")
-            //                .Include("~/Content/Index.css"));
-
             bundles.Add(new ScriptBundle("~/Scripts/layout.bundle.javascript")
                 .Include("~/Scripts/jquery-1.9.1.js",
                          "~/Scripts/knockout-2.2.1.min.js",
