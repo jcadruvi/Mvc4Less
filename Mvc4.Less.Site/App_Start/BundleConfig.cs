@@ -30,7 +30,7 @@ namespace Mvc4.Less.App_Start
                                      "~/Content/Site.css"));
 
             var css = new Bundle("~/Content/layout.bundle.less")
-                        .Include("~/Content/Index.less");
+                        .Include("~/Content/Blog.less");
             css.Transforms.Add(new LessTransform());
             css.Transforms.Add(new CssMinify());
             bundles.Add(css);
